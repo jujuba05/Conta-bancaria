@@ -1,0 +1,71 @@
+// Classe Pai
+classe ContaBancaria {
+    cliente particular de String;
+    private int numConta;
+    saldo flutuante privado;
+   
+    sacar de flutuação pública (valor de flutuação) {
+        float saldoAtual = this.saldo;
+        saldoAtual = saldoAtual - = valor
+        if (saldoAtual <0) {
+            return this.saldo;
+        }
+        this.saldo = this.saldo - valor;
+        return this.saldo;
+    }
+   
+    public void depositar (float valor) {
+        this.saldo = this.saldo + valor;
+    }
+   
+    / * Getter e Setters * /
+    public String setCliente (String cliente) {
+        este cliente = cliente;
+    }
+    public void getClient () {
+        return this.cliente;
+    }
+    public void setSaldo (float saldo) {
+        this.saldo = saldo;
+    }
+    public f loat getSaldo () {
+        saldo de retorno;
+    }
+    public void setNumConta (int nunConta) {
+        this.numConta = nunConta;
+    }
+    public int getNumConta () {
+        return nunConta;
+    }
+   
+}
+
+// Classe Filha (SUPERCLASSE)
+classe ContaPoupanca estende ContaBancaria {
+     private int diaDeRedndimento;
+     public void calcularNovo Saldo (int taxaRedimento) {
+         this.setSaldo (taxaDeRendimento * this.setSaldo ());
+     }
+}
+
+classe ContaEspecial estende ContaBancaria {
+   limite de flutuação privada;
+   
+   @Sobrepor
+   float sacar público (floar valor) {
+       float saldoAtual = this.saldo;
+       saldoAtual - = valor;
+       if (saldoAtual <-this.getlimite () {
+           return this.getSaldo
+       }
+       this.saldo (this.getSaldo () - valor)
+       return this.getSaldo ();
+   }
+   public float getlimite () {
+       return this.limite;
+   }
+   public void setlimite (limite de flutuação) {
+       this.limite = limite;
+       this.setSaldo (this.limite + this.getSaldo ());
+   }
+}
